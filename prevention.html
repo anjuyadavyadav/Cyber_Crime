@@ -9,14 +9,22 @@
 <body>
 
 <nav>
-<h2>CyberSecure</h2>
-<div>
-<a href="index.html">Home</a>
-<a href="threats.html">Threats</a>
-<a href="prevention.html">Prevention</a>
-<a href="report.html">Report</a>
-</div>
+    <h2>CyberSecure</h2>
+
+    <!-- Hamburger Icon -->
+    <div class="menu-toggle" onclick="toggleMenu()">
+        ☰
+    </div>
+
+    <!-- Navigation Links -->
+    <div class="nav-links" id="navLinks">
+        <a href="index.html">Home</a>
+        <a href="threats.html">Threats</a>
+        <a href="prevention.html">Prevention</a>
+        <a href="report.html">Report</a>
+    </div>
 </nav>
+
 
 <section class="prevention-section">
 <h2 class="glow-title">🛡 How to Stay Safe Online</h2>
@@ -82,6 +90,11 @@
         result.style.color = "#ef4444";
     }
 }
+
+function toggleMenu() {
+    document.getElementById("navLinks").classList.toggle("show-menu");
+}
+
 
 </script>
 
