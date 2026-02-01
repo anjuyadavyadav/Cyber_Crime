@@ -318,3 +318,84 @@ footer{
 .quiz-box button{
     margin:8px;
 }
+
+
+
+/* ================= MOBILE DEVICES ================= */
+@media (max-width: 768px) {
+
+    /* Navbar */
+    nav {
+        flex-direction: column;
+        padding: 15px 20px;
+        text-align: center;
+    }
+
+    nav div {
+        margin-top: 10px;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 8px 10px;
+    }
+
+    /* Hero Section */
+    .hero {
+        height: auto;
+        padding: 60px 20px;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    /* Sections */
+    section {
+        padding: 40px 20px;
+    }
+
+    section h2 {
+        font-size: 1.6rem;
+    }
+
+    /* Cards become 1 column */
+    .cards,
+    .resource-cards,
+    .tips-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Buttons full width */
+    .btn,
+    button {
+        width: 100%;
+        margin-top: 12px;
+    }
+
+    /* Inputs full width */
+    input {
+        width: 100%;
+        margin: 8px 0;
+    }
+
+    /* Report & Tool boxes */
+    .report-card,
+    .tool-box,
+    .quiz-box {
+        margin: 20px 10px;
+        padding: 20px;
+    }
+
+    /* Emergency alert text smaller */
+    .emergency-alert {
+        font-size: 1rem;
+    }
+
+}
+
+
