@@ -232,54 +232,8 @@ footer{
     margin-top:40px;
 }
 
-/* ===== RESPONSIVE ===== */
-@media(max-width:768px){
-    section{padding:40px 20px;}
-    nav{flex-direction:column;}
-}
-.threat-list{
-    list-style:none;
-    padding:0;
-}
 
-.threat-list li{
-    background:#1e293b;
-    margin:10px 0;
-    padding:15px;
-    border-left:4px solid #38bdf8;
-    cursor:pointer;
-    border-radius:6px;
-}
-
-.threat-info{
-    display:none;
-    margin-top:10px;
-    background:#0f172a;
-    padding:15px;
-    border-radius:6px;
-    font-size:0.95rem;
-}
-
-.show{
-    display:block;
-}
-.report-box a,
-.resource-list a {
-    color: #0a58ca;
-    text-decoration: underline;
-    font-weight: bold;
-    cursor: pointer;
-    pointer-events: auto;   /* ensures link clickable */
-}
-
-.report-box a:hover,
-.resource-list a:hover {
-    color: #ff6600;
-}
-
-
-
-
+/* prevention-section */
 
 .prevention-section, .tools-section{
     padding:60px 20px;
@@ -319,25 +273,59 @@ footer{
     margin:8px;
 }
 
+/* Hide hamburger on desktop */
+.menu-toggle {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: #38bdf8;
+}
 
 
-/* ================= MOBILE DEVICES ================= */
+/* ================= RESPONSIVE DESIGN ================= */
 @media (max-width: 768px) {
+
+    /* General Section Spacing */
+    section {
+        padding: 40px 20px;
+    }
 
     /* Navbar */
     nav {
         flex-direction: column;
         padding: 15px 20px;
         text-align: center;
+        position: relative;
     }
 
-    nav div {
+    /* Hamburger Icon */
+    .menu-toggle {
+        display: block;
+        position: absolute;
+        right: 20px;
+        top: 18px;
+    }
+
+    /* Nav Links Hidden by Default */
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background: #0f172a;
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
         margin-top: 10px;
+        border-top: 1px solid rgba(255,255,255,0.1);
     }
 
-    nav a {
-        display: inline-block;
-        margin: 8px 10px;
+    .nav-links a {
+        display: block;
+        margin: 12px 0;
+    }
+
+    /* When menu opens */
+    .nav-links.show-menu {
+        display: flex;
     }
 
     /* Hero Section */
@@ -354,36 +342,32 @@ footer{
         font-size: 1rem;
     }
 
-    /* Sections */
-    section {
-        padding: 40px 20px;
-    }
-
+    /* Section Headings */
     section h2 {
         font-size: 1.6rem;
     }
 
-    /* Cards become 1 column */
+    /* Grid Layouts → Single Column */
     .cards,
     .resource-cards,
     .tips-grid {
         grid-template-columns: 1fr;
     }
 
-    /* Buttons full width */
+    /* Buttons */
     .btn,
     button {
         width: 100%;
         margin-top: 12px;
     }
 
-    /* Inputs full width */
+    /* Inputs */
     input {
         width: 100%;
         margin: 8px 0;
     }
 
-    /* Report & Tool boxes */
+    /* Boxes */
     .report-card,
     .tool-box,
     .quiz-box {
@@ -391,11 +375,52 @@ footer{
         padding: 20px;
     }
 
-    /* Emergency alert text smaller */
+    /* Emergency Alert */
     .emergency-alert {
         font-size: 1rem;
     }
-
 }
 
 
+/* ================= THREAT LIST ================= */
+.threat-list {
+    list-style: none;
+    padding: 0;
+}
+
+.threat-list li {
+    background: #1e293b;
+    margin: 10px 0;
+    padding: 15px;
+    border-left: 4px solid #38bdf8;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+.threat-info {
+    display: none;
+    margin-top: 10px;
+    background: #0f172a;
+    padding: 15px;
+    border-radius: 6px;
+    font-size: 0.95rem;
+}
+
+.show {
+    display: block;
+}
+
+
+/* ================= LINK STYLES ================= */
+.report-box a,
+.resource-list a {
+    color: #0a58ca;
+    text-decoration: underline;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.report-box a:hover,
+.resource-list a:hover {
+    color: #ff6600;
+}
