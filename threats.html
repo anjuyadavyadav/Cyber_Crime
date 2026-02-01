@@ -9,14 +9,22 @@
 <body>
 
 <nav>
-  <h2>CyberSecure</h2>
-  <div>
-    <a href="index.html">Home</a>
-    <a href="threats.html">Threats</a>
-    <a href="prevention.html">Prevention</a>
-    <a href="report.html">Report</a>
-  </div>
+    <h2>CyberSecure</h2>
+
+    <!-- Hamburger Icon -->
+    <div class="menu-toggle" onclick="toggleMenu()">
+        ☰
+    </div>
+
+    <!-- Navigation Links -->
+    <div class="nav-links" id="navLinks">
+        <a href="index.html">Home</a>
+        <a href="threats.html">Threats</a>
+        <a href="prevention.html">Prevention</a>
+        <a href="report.html">Report</a>
+    </div>
 </nav>
+
 
 <section class="threat-section">
 <h2>⚠ Common Cyber Threats</h2>
@@ -196,6 +204,11 @@ function toggleInfo(id, element){
     info.classList.toggle("show");
     element.classList.toggle("active");
 }
+
+function toggleMenu() {
+    document.getElementById("navLinks").classList.toggle("show-menu");
+}
+
 </script>
 
 </body>
