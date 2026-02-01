@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Prevention</title>
+<link rel="stylesheet" href="style.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+
+<nav>
+<h2>CyberSecure</h2>
+<div>
+<a href="index.html">Home</a>
+<a href="threats.html">Threats</a>
+<a href="prevention.html">Prevention</a>
+<a href="report.html">Report</a>
+</div>
+</nav>
+
+<section class="prevention-section">
+<h2 class="glow-title">🛡 How to Stay Safe Online</h2>
+
+<div class="tips-grid">
+<div class="tip-card">🔐 Use strong unique passwords</div>
+<div class="tip-card">📱 Enable Two-Factor Authentication</div>
+<div class="tip-card">🚫 Avoid clicking unknown links</div>
+<div class="tip-card">🔄 Update software regularly</div>
+<div class="tip-card">🦠 Install antivirus protection</div>
+</div>
+</section>
+
+<section class="tools-section">
+
+<h2 class="glow-title">🔎 Password Strength Checker</h2>
+<div class="tool-box">
+<input type="password" id="passwordInput" placeholder="Enter password">
+<button onclick="checkPassword()">Check Strength</button>
+<p id="strengthResult"></p>
+</div>
+
+<h2 class="glow-title">🧠 Quick Cyber Quiz</h2>
+<div class="quiz-box">
+<p><b>Best way to store passwords?</b></p>
+<button onclick="quizAnswer('wrong')">Write on notebook</button>
+<button onclick="quizAnswer('wrong')">Use same password</button>
+<button onclick="quizAnswer('right')">Password Manager</button>
+<p id="quizResult"></p>
+</div>
+
+</section>
+
+<script>
+
+    function checkPassword() {
+    const pwd = document.getElementById("passwordInput").value;
+    const result = document.getElementById("strengthResult");
+
+    if (pwd.length < 6) {
+        result.innerHTML = "Weak password 😟";
+        result.style.color = "red";
+    }
+    else if (pwd.match(/[A-Z]/) && pwd.match(/[0-9]/) && pwd.match(/[@$!%*?&]/)) {
+        result.innerHTML = "Strong password 💪";
+        result.style.color = "lime";
+    }
+    else {
+        result.innerHTML = "Medium strength ⚠ Add numbers, symbols & capital letters";
+        result.style.color = "orange";
+    }
+}
+
+
+    function quizAnswer(answer) {
+    const result = document.getElementById("quizResult");
+
+    if (answer === "right") {
+        result.innerHTML = "✅ Correct! Password managers store passwords securely and help create strong ones.";
+        result.style.color = "#22c55e";
+    } else {
+        result.innerHTML = "❌ Not safe. Writing passwords down or reusing them can lead to hacking.";
+        result.style.color = "#ef4444";
+    }
+}
+
+</script>
+
+<footer>
+<p>© 2026 CyberSecure Awareness Portal</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Cyber Threats</title>
+<link rel="stylesheet" href="style.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+
+<nav>
+  <h2>CyberSecure</h2>
+  <div>
+    <a href="index.html">Home</a>
+    <a href="threats.html">Threats</a>
+    <a href="prevention.html">Prevention</a>
+    <a href="report.html">Report</a>
+  </div>
+</nav>
+
+<section class="threat-section">
+<h2>⚠ Common Cyber Threats</h2>
+<p class="subtitle">Click on a threat to reveal details & protection tips</p>
+
+<ul class="threat-list">
+
+<li onclick="toggleInfo('t1', this)">
+<span>🎣 Phishing</span>
+<div id="t1" class="threat-info">
+<p><b>What is it?</b> Fake emails/messages designed to steal passwords or bank data.</p>
+<p><b>Example:</b> "Your bank account is blocked, click here."</p>
+<p><b>How to Stay Safe:</b></p>
+<ul>
+<li>Check sender email carefully</li>
+<li>Never click unknown links</li>
+<li>Never share OTP or passwords</li>
+</ul>
+</div>
+</li>
+
+<li onclick="toggleInfo('t2', this)">
+<span>🦠 Malware</span>
+<div id="t2" class="threat-info">
+<p><b>What is it?</b> Harmful software like viruses, spyware, or trojans.</p>
+<p><b>How to Stay Safe:</b></p>
+<ul>
+<li>Install antivirus software</li>
+<li>Avoid pirated software</li>
+<li>Keep system updated</li>
+</ul>
+</div>
+</li>
+
+<li onclick="toggleInfo('t3', this)">
+<span>🔒 Ransomware</span>
+<div id="t3" class="threat-info">
+<p><b>What is it?</b> Encrypts files and demands money.</p>
+<p><b>How to Stay Safe:</b></p>
+<ul>
+<li>Backup data regularly</li>
+<li>Avoid unknown attachments</li>
+<li>Use updated antivirus</li>
+</ul>
+</div>
+</li>
+
+<li onclick="toggleInfo('t4', this)">
+<span>🎭 Social Engineering</span>
+<div id="t4" class="threat-info">
+<p><b>What is it?</b> Hackers manipulate people to reveal confidential info.</p>
+<p><b>How to Stay Safe:</b></p>
+<ul>
+<li>Banks never ask OTP</li>
+<li>Verify caller identity</li>
+<li>Do not share personal info</li>
+</ul>
+</div>
+</li>
+
+<li onclick="toggleInfo('t5', this)">
+<span>🧾 Identity Theft</span>
+<div id="t5" class="threat-info">
+<p><b>What is it?</b> Stealing personal data to misuse identity.</p>
+<p><b>How to Stay Safe:</b></p>
+<ul>
+<li>Protect Aadhaar / PAN</li>
+<li>Do not upload documents publicly</li>
+</ul>
+</div>
+</li>
+
+<li onclick="toggleInfo('t6', this)">
+<span>🔑 Password Attacks</span>
+<div id="t6" class="threat-info">
+<p><b>What is it?</b> Cracking weak passwords.</p>
+<p><b>How to Stay Safe:</b></p>
+<ul>
+<li>Use strong unique passwords</li>
+<li>Enable Two-Factor Authentication</li>
+</ul>
+</div>
+</li>
+
+<li onclick="toggleInfo('t7', this)">
+<span>💸 Online Scams</span>
+<div id="t7" class="threat-info">
+<p><b>What is it?</b> Fake offers or lottery scams.</p>
+<p><b>How to Stay Safe:</b></p>
+<ul>
+<li>Do not trust "easy money" offers</li>
+</ul>
+</div>
+</li>
+
+<li onclick="toggleInfo('t8', this)">
+<span>🌐 Fake Websites</span>
+<div id="t8" class="threat-info">
+<p><b>What is it?</b> Duplicate websites created to steal login data.</p>
+<p><b>How to Stay Safe:</b></p>
+<ul>
+<li>Check URL spelling</li>
+<li>Look for HTTPS & lock icon</li>
+</ul>
+</div>
+</li>
+
+<li onclick="toggleInfo('t9', this)">
+<span>👁 Spyware</span>
+<div id="t9" class="threat-info">
+<p><b>What is it?</b> Software that secretly monitors activity.</p>
+<p><b>How to Stay Safe:</b></p>
+<ul>
+<li>Install security updates</li>
+<li>Use trusted apps only</li>
+</ul>
+</div>
+</li>
+
+<li onclick="toggleInfo('t10', this)">
+<span>📂 Data Breach</span>
+<div id="t10" class="threat-info">
+<p><b>What is it?</b> Unauthorized access to personal/company data.</p>
+<p><b>How to Stay Safe:</b></p>
+<ul>
+<li>Change passwords regularly</li>
+<li>Monitor account activity</li>
+</ul>
+</div>
+</li>
+
+<li onclick="toggleInfo('t11', this)">
+<span>📡 Public Wi-Fi Attacks</span>
+<div id="t11" class="threat-info">
+<p><b>What is it?</b> Hackers intercept data on free Wi-Fi.</p>
+<p><b>How to Stay Safe:</b></p>
+<ul>
+<li>Avoid banking on public Wi-Fi</li>
+<li>Use VPN</li>
+</ul>
+</div>
+</li>
+
+<li onclick="toggleInfo('t12', this)">
+<span>💬 Cyber Bullying</span>
+<div id="t12" class="threat-info">
+<p><b>What is it?</b> Online harassment or threats.</p>
+<p><b>How to Stay Safe:</b></p>
+<ul>
+<li>Block & report bully</li>
+<li>Keep evidence (screenshots)</li>
+</ul>
+</div>
+</li>
+
+</ul>
+
+</section>
+
+<footer>
+<p>© 2026 CyberSecure Awareness Portal</p>
+</footer>
+
+<script>
+function toggleInfo(id, element){
+    const allInfo = document.querySelectorAll(".threat-info");
+    const allItems = document.querySelectorAll(".threat-list li");
+    const info = document.getElementById(id);
+
+    allInfo.forEach(item => {
+        if(item !== info){
+            item.classList.remove("show");
+        }
+    });
+
+    allItems.forEach(li => li.classList.remove("active"));
+    info.classList.toggle("show");
+    element.classList.toggle("active");
+}
+</script>
+
+</body>
+</html>
